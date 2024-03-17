@@ -1,4 +1,4 @@
-package pncp.api.models.pncp.amparoLegal.repository;
+package pncp.api.models.pncp.dominios.amparoLegal.repository;
 
 import org.antlr.v4.runtime.misc.NotNull;
 import org.hibernate.annotations.NotFound;
@@ -15,7 +15,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
-import pncp.api.models.pncp.amparoLegal.dto.DadosAmparoLegalDTO;
+import pncp.api.models.pncp.dominios.amparoLegal.dto.DadosAmparoLegalDTO;
 
 
 @Entity(name = "amparoLegal")
@@ -53,13 +53,14 @@ public class AmparoLegal {
         this.descricao = dados.descricao();
         this.dataInclusao = dados.dataInclusao();
         this.dataAtualizacao = dados.dataAtualizacao();
-        this.status = true;
+        this.status = dados.status();
 
     }
 
-    public AmparoLegal() {
-        // Construtor padrão vazio
+    public AmparoLegal(){
+        
     }
-    
+
+
     
 }

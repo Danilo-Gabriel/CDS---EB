@@ -1,4 +1,4 @@
-package pncp.api.models.pncp.amparoLegal.services;
+package pncp.api.models.pncp.dominios.amparoLegal.services;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package pncp.api.models.pncp.amparoLegal.dto;
+package pncp.api.models.pncp.dominios.amparoLegal.dto;
 
 public record DadosAmparoLegalDTO(
 
