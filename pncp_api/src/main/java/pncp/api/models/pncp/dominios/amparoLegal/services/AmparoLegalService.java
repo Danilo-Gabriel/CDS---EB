@@ -27,13 +27,34 @@ public class AmparoLegalService {
 
 
 
-     public List<DadosAmparoLegalDTO> recuperarDadosPncpClassService(Boolean statusAtivo){
+     public void recuperarDadosPncpClassService(Boolean statusAtivo){
           
             String url = apiUrl + "?statusAtivo=" + statusAtivo;
             
             // Implementar DTO para resposta de sucesso depois, e passar para o arquivo services também
             ResponseEntity<DadosAmparoLegalDTO[]> resposta = restTamplate.restTemplate().getForEntity(url, DadosAmparoLegalDTO[].class);
-           return Arrays.asList(resposta.getBody());
+
+
+            List<DadosAmparoLegalDTO> dados = Arrays.asList(resposta.getBody());
+           
+
+		if(dados.isEmpty()){
+			System.out.println("Nenhum dado encontrado");
+		}
+		else{
+
+			for (DadosAmparoLegalDTO dado : dados){
+				
+				this.registrarAmparosLegaisClassService(dado);
+			
+			}
+			
+			System.out.println("Dados Recuperado");
+
+			
+		}
+		
+
       
     }
 
