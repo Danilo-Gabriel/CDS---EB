@@ -18,7 +18,7 @@ import lombok.experimental.FieldDefaults;
 import pncp.api.models.pncp.dominios.amparoLegal.dto.DadosAmparoLegalDTO;
 
 
-@Entity(name = "amparoLegal")
+@Entity(name = "AmparoLegal")
 @Table(name = "amparo_legal")
 @Getter
 @Setter
