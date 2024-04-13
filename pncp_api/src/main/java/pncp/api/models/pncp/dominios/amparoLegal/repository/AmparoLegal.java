@@ -53,7 +53,7 @@ public class AmparoLegal {
         this.descricao = dados.descricao();
         this.dataInclusao = dados.dataInclusao();
         this.dataAtualizacao = dados.dataAtualizacao();
-        this.status = dados.statusAtivo();
+        this.status = dados.status();
 
     }
 

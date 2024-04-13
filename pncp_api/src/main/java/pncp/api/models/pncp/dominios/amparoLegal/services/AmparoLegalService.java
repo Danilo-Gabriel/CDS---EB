@@ -60,7 +60,6 @@ public class AmparoLegalService {
 
 
          AmparoLegal newDados = new AmparoLegal(dados);
- 
          this.repository.save(newDados);
  
      }

@@ -12,7 +12,7 @@ public record DadosAmparoLegalDTO(
 
     String dataAtualizacao,
 
-    Boolean statusAtivo
+    Boolean status
 
 ) {
     
